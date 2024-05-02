@@ -1,5 +1,6 @@
 import './App.css';
-import Expenses from './components/Expenses';
+import Expenses from './components/Expense/Expenses';
+import NewExpense from './components/NewExpense/NewExpense';
 
 function App() {
   //지출 항목 객체 배열
@@ -28,6 +29,7 @@ function App() {
       <ExpenseItem title='bbq치킨' price='20000' date='2024년 04월 05일' />
       <ExpenseItem title='짜장면' price='8000' date='2024년 04월 25일' /> */}
 
+      <NewExpense />
       <Expenses items={expenses} />
     </>
   );
