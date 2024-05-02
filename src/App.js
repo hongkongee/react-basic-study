@@ -1,11 +1,7 @@
 import './App.css';
-import ExpenseItem from './components/ExpenseItem';
 import Expenses from './components/Expenses';
-import Hello from './Hello';
-
 
 function App() {
-
   //지출 항목 객체 배열
 
   const expenses = [
@@ -32,15 +28,7 @@ function App() {
       <ExpenseItem title='bbq치킨' price='20000' date='2024년 04월 05일' />
       <ExpenseItem title='짜장면' price='8000' date='2024년 04월 25일' /> */}
 
-      <Expenses items={expenses}/>
-      <Hello>
-        <ul>
-          <li>핑궈</li>
-          <li>푸타오</li>
-          <li>타오쯔</li>
-        </ul>
-      </Hello>
-      
+      <Expenses items={expenses} />
     </>
   );
 }
