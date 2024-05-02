@@ -23,13 +23,19 @@ function App() {
     },
   ];
 
+  // ExpenseForm 에게 내려보낼 함수
+  const addExpenseHandler = (newExpense) => {
+    console.log('App 컴포넌트에서 응답함!');
+    console.log('newExpense: ', newExpense);
+  };
+
   return (
     <>
       {/* <ExpenseItem title='피자헛' price='15000' date='2024년 04월 15일' />
       <ExpenseItem title='bbq치킨' price='20000' date='2024년 04월 05일' />
       <ExpenseItem title='짜장면' price='8000' date='2024년 04월 25일' /> */}
 
-      <NewExpense />
+      <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
     </>
   );
