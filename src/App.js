@@ -1,6 +1,7 @@
 import './App.css';
 import ExpenseItem from './components/ExpenseItem';
-import Expenses from './Expenses';
+import Expenses from './components/Expenses';
+import Hello from './Hello';
 
 
 function App() {
@@ -32,6 +33,13 @@ function App() {
       <ExpenseItem title='짜장면' price='8000' date='2024년 04월 25일' /> */}
 
       <Expenses items={expenses}/>
+      <Hello>
+        <ul>
+          <li>핑궈</li>
+          <li>푸타오</li>
+          <li>타오쯔</li>
+        </ul>
+      </Hello>
       
     </>
   );
