@@ -38,7 +38,7 @@ const ExpenseForm = ({ onSaveExpense, onToggle }) => {
 
     const newExpense = {
       title: userInput.title,
-      price: userInput.price,
+      price: +userInput.price,
       date: new Date(userInput.date),
     };
     onSaveExpense(newExpense); // App.js가 내려준 함수를 호출하면서, 올리고자 하는 데이터를 매개값으로 전달.
