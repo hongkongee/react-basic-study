@@ -7,6 +7,7 @@ import AuthContext from './components/store/auth-context';
 import Header from './components/Food/Layout/Header';
 import Meals from './components/Food/Meals/Meals';
 import Cart from './components/Food/Cart/Cart';
+import CartProvider from './components/store/CartProvider';
 
 function App() {
   console.log('App 컴포넌트 실행!');
@@ -47,12 +48,12 @@ function App() {
   console.log('App 컴포넌트 끝!');
 
   return (
-    <>
+    <CartProvider>
       <Header />
       <div id="main">
         <Meals />
       </div>
-    </>
+    </CartProvider>
   );
 }
 

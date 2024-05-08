@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styles from './MealItemForm.module.scss';
 import Input from '../../../UI/Input/Input';
 
-const MealItemForm = (props) => {
+const MealItemForm = ({ id, onAddToCart }) => {
   // 수량의 상태를 관리하는 변수
   const [amount, setAmount] = useState(0);
 
@@ -15,6 +15,7 @@ const MealItemForm = (props) => {
   // 담기 버튼을 누르면 발동하는 함수
   const formSubmitHandler = (e) => {
     e.preventDefault();
+    onAddToCart(amount); // 해당 컴포넌트가 기억하고 있는 수량 상태값을 넘김.
   };
 
   return (
@@ -23,7 +24,7 @@ const MealItemForm = (props) => {
         onAdd={amountHandler}
         label="수량"
         input={{
-          id: 'amount_' + props.id,
+          id: 'amount_' + id,
           type: 'number',
           min: '1',
           max: '5',
