@@ -4,6 +4,7 @@ import MainHeader from './components/SideEffect/MainHeader/MainHeader';
 import Login from './components/SideEffect/Login/Login';
 import Home from './components/SideEffect/Home/Home';
 import AuthContext from './components/store/auth-context';
+import Header from './components/Food/Layout/Header';
 
 function App() {
   console.log('App 컴포넌트 실행!');
@@ -44,17 +45,9 @@ function App() {
   console.log('App 컴포넌트 끝!');
 
   return (
-    <AuthContext.Provider
-      value={{
-        isLoggedIn,
-      }}
-    >
-      <MainHeader onLogout={logoutHandler} />
-      <main>
-        {isLoggedIn && <Home />}
-        {!isLoggedIn && <Login onLogin={loginHandler} />}
-      </main>
-    </AuthContext.Provider>
+    <>
+      <Header />
+    </>
   );
 }
 
