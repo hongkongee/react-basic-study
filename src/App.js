@@ -5,6 +5,7 @@ import Login from './components/SideEffect/Login/Login';
 import Home from './components/SideEffect/Home/Home';
 import AuthContext from './components/store/auth-context';
 import Header from './components/Food/Layout/Header';
+import Meals from './components/Food/Meals/Meals';
 
 function App() {
   console.log('App 컴포넌트 실행!');
@@ -47,6 +48,9 @@ function App() {
   return (
     <>
       <Header />
+      <div id="main">
+        <Meals />
+      </div>
     </>
   );
 }
