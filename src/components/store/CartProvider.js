@@ -9,6 +9,8 @@ const defaultState = {
 // 리듀서 함수 정의: 여러가지 복잡한 상태관리를 중앙 집중화
 // state: 업데이트 하기 전의 상태값
 // action: 어떤 업데이트를 하는지에 대한 정보와 필요값들이 들어 있음(dispatch 함수에 의해 전달)
+
+/* ========== Reducer start ========== */
 const cartReducer = (state, action) => {
   // 상태 변화의 타입이 ADD 라면
   if (action.type === 'ADD') {
@@ -80,6 +82,7 @@ const cartReducer = (state, action) => {
 
   return defaultState;
 };
+/* ========== Reducer end ========== */
 
 const CartProvider = ({ children }) => {
   // 리듀서 사용

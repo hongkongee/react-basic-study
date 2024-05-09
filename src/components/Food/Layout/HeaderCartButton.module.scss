@@ -63,3 +63,17 @@ $animation-duration: 300ms;
     transform: scale(1);
   }
 }
+
+
+.rotate {
+  animation: rotate_image 6s linear infinite; transform-origin: 50% 50%;
+}
+
+@keyframes rotate_image{
+  50%{
+    transform: rotate(180deg);
+  }
+  100%{
+    transform: rotate(-90deg);
+  }
+}
