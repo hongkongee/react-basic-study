@@ -3,7 +3,8 @@ import React from 'react';
 // 컨텍스트에 들어가는 초기 객체는 뭘 담을 것인지에 대한 정의
 const CartContext = React.createContext({
   items: [], // 장바구니에 담긴 항목 배열
-  addItem: (item) => {}, // 주문 총액
+  totalPrice: 0, // 주문 총액
+  addItem: (item) => {},
   removeItem: (id) => {},
 });
 

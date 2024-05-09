@@ -3,7 +3,7 @@ import styles from './CartItem.module.scss';
 import CartContext from '../../store/cart-context';
 
 const CartItem = ({ cart }) => {
-  const { name, price, amount } = cart;
+  const { id, name, price, amount } = cart;
   const {
     'cart-item': cartItem,
     summary,
@@ -14,7 +14,7 @@ const CartItem = ({ cart }) => {
 
   const formatPrice = new Intl.NumberFormat('ko-KR').format(price);
 
-  const { addItem } = useContext(CartContext);
+  const { addItem, removeItem } = useContext(CartContext);
 
   // + 버튼을 누르면 무조건 amount는 하나다
   const cartAddItemHandler = () => {
@@ -23,7 +23,9 @@ const CartItem = ({ cart }) => {
     addItem({ ...cart, amount: 1 });
   };
 
-  const cartRemoveItemHandler = () => {};
+  const cartRemoveItemHandler = () => {
+    removeItem(id);
+  };
 
   return (
     <li className={cartItem}>
